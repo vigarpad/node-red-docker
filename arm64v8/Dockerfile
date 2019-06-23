@@ -1,6 +1,5 @@
-FROM aarch64/node:4.6-slim
-
-# Experimental ARMv8 support for Node-RED
+ARG NODE_VERSION=8
+FROM arm64v8/node:${NODE_VERSION}
 
 # Home directory for Node-RED application source code.
 RUN mkdir -p /usr/src/node-red
